@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TALA - The Smartest, Safest Dog Travel Sanctuary</title>
+  {{ 'main.css' | asset_url | stylesheet_tag }}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  {% section 'header' %}
+  {% section 'hero' %}
+  {% section 'features' %}
+  {% section 'climate-control' %}
+  {% section 'safety' %}
+  {% section 'portability' %}
+  {% section 'cta' %}
+  {% section 'footer' %}
+  
+  {% section 'waitlist-popup' %}
+  
+  {{ 'main.js' | asset_url | script_tag }}
+</body>
+</html>

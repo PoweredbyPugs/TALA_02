@@ -1,0 +1,37 @@
+<div class="header">
+  <div class="container">
+    <div class="header__logo">
+      <a href="/">
+        <img src="{{ 'charcoal.png' | asset_url }}" alt="TALA Logo" class="header__logo-img">
+      </a>
+    </div>
+    <nav class="header__nav">
+      <ul class="header__nav-list">
+        <li class="header__nav-item"><a href="#features" class="header__nav-link">Features</a></li>
+        <li class="header__nav-item"><a href="#climate-control" class="header__nav-link">Climate Control</a></li>
+        <li class="header__nav-item"><a href="#safety" class="header__nav-link">Safety</a></li>
+        <li class="header__nav-item"><a href="#portability" class="header__nav-link">Portability</a></li>
+      </ul>
+    </nav>
+    <div class="header__cta">
+      <button class="btn btn--secondary waitlist-trigger">Join Waitlist</button>
+    </div>
+    <div class="header__mobile-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileToggle = document.querySelector('.header__mobile-toggle');
+    const nav = document.querySelector('.header__nav');
+    
+    mobileToggle.addEventListener('click', function() {
+      this.classList.toggle('active');
+      nav.classList.toggle('active');
+    });
+  });
+</script>

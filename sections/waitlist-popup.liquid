@@ -1,0 +1,75 @@
+<div id="waitlist-popup" class="popup">
+  <div class="popup__overlay"></div>
+  <div class="popup__container">
+    <button class="popup__close">&times;</button>
+    <div class="popup__content">
+      <h2 class="popup__title">Join the TALA Waitlist</h2>
+      <p class="popup__text">Be among the first to experience the revolutionary TALA dog crate. Enter your email to join our waitlist and receive updates.</p>
+      
+      <form id="waitlist-form" class="popup__form">
+        <div class="form-group">
+          <label for="email" class="form-label">Email Address</label>
+          <input type="email" id="email" name="email" class="form-input" placeholder="your@email.com" required>
+        </div>
+        <div class="form-group">
+          <label for="name" class="form-label">Full Name</label>
+          <input type="text" id="name" name="name" class="form-input" placeholder="Your Name" required>
+        </div>
+        <button type="submit" class="btn btn--primary btn--full">Join Waitlist</button>
+      </form>
+      
+      <div id="waitlist-success" class="popup__success" style="display: none;">
+        <div class="success-icon">✓</div>
+        <h3>Thank You!</h3>
+        <p>You've been added to our waitlist. We'll keep you updated on TALA's launch.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const popup = document.getElementById('waitlist-popup');
+    const triggers = document.querySelectorAll('.waitlist-trigger');
+    const closeBtn = document.querySelector('.popup__close');
+    const overlay = document.querySelector('.popup__overlay');
+    const form = document.getElementById('waitlist-form');
+    const success = document.getElementById('waitlist-success');
+    
+    // Open popup
+    triggers.forEach(trigger => {
+      trigger.addEventListener('click', function() {
+        popup.classList.add('active');
+        document.body.classList.add('no-scroll');
+      });
+    });
+    
+    // Close popup
+    function closePopup() {
+      popup.classList.remove('active');
+      document.body.classList.remove('no-scroll');
+    }
+    
+    closeBtn.addEventListener('click', closePopup);
+    overlay.addEventListener('click', closePopup);
+    
+    // Form submission
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      // Simulate form submission
+      setTimeout(function() {
+        form.style.display = 'none';
+        success.style.display = 'block';
+        
+        // Reset and close after 3 seconds
+        setTimeout(function() {
+          form.reset();
+          form.style.display = 'block';
+          success.style.display = 'none';
+          closePopup();
+        }, 3000);
+      }, 1000);
+    });
+  });
+</script>
