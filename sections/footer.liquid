@@ -104,7 +104,8 @@
         {% if section.settings.logo %}
           <img src="{{ section.settings.logo | img_url: 'master' }}" alt="{{ shop.name }}" class="footer__logo-img">
         {% else %}
-          <img src="{{ 'charcoal.png' | asset_url }}" alt="{{ shop.name }}" class="footer__logo-img">
+          <img src="{{ 'tala-logo-charcoal.png' | asset_url }}" alt="{{ shop.name }}" class="footer__logo-img light-mode-logo">
+          <img src="{{ 'tala-logo-cream.png' | asset_url }}" alt="{{ shop.name }}" class="footer__logo-img dark-mode-logo">
         {% endif %}
         <p>{{ section.settings.description }}</p>
       </div>
