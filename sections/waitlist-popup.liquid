@@ -1,27 +1,80 @@
-<div id="waitlist-popup" class="popup">
+{% schema %}
+{
+  "name": "Waitlist Popup",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Popup Title",
+      "default": "Join the Waitlist"
+    },
+    {
+      "type": "textarea",
+      "id": "text",
+      "label": "Popup Text",
+      "default": "Be the first to know when TALA becomes available. Sign up for exclusive updates and early access."
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Submit Button Text",
+      "default": "Join Waitlist"
+    },
+    {
+      "type": "text",
+      "id": "success_title",
+      "label": "Success Title",
+      "default": "Thank You!"
+    },
+    {
+      "type": "textarea",
+      "id": "success_text",
+      "label": "Success Text",
+      "default": "You've been added to our waitlist. We'll keep you updated on TALA's progress and notify you when it's available."
+    },
+    {
+      "type": "text",
+      "id": "close_button_text",
+      "label": "Close Button Text",
+      "default": "Close"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Waitlist Popup",
+      "category": "Popup"
+    }
+  ]
+}
+{% endschema %}
+
+<div class="popup" id="waitlist-popup">
   <div class="popup__overlay"></div>
   <div class="popup__container">
     <button class="popup__close">&times;</button>
     <div class="popup__content">
-      <h2 class="popup__title">Join the TALA Waitlist</h2>
-      <p class="popup__text">Be among the first to experience the revolutionary TALA dog crate. Enter your email to join our waitlist and receive updates.</p>
-      
-      <form id="waitlist-form" class="popup__form">
-        <div class="form-group">
-          <label for="email" class="form-label">Email Address</label>
-          <input type="email" id="email" name="email" class="form-input" placeholder="your@email.com" required>
-        </div>
-        <div class="form-group">
-          <label for="name" class="form-label">Full Name</label>
-          <input type="text" id="name" name="name" class="form-input" placeholder="Your Name" required>
-        </div>
-        <button type="submit" class="btn btn--primary btn--full">Join Waitlist</button>
-      </form>
-      
-      <div id="waitlist-success" class="popup__success" style="display: none;">
+      <div class="popup__form-container">
+        <h2 class="popup__title">{{ section.settings.title }}</h2>
+        <p class="popup__text">{{ section.settings.text }}</p>
+        <form class="popup__form" id="waitlist-form" action="{{ routes.root_url }}?contact%5Btags%5D=waitlist" method="post">
+          <input type="hidden" name="form_type" value="customer">
+          <input type="hidden" name="utf8" value="✓">
+          <div class="form-group">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" id="name" name="contact[name]" class="form-input" required>
+          </div>
+          <div class="form-group">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" id="email" name="contact[email]" class="form-input" required>
+          </div>
+          <button type="submit" class="btn btn--primary btn--full">{{ section.settings.button_text }}</button>
+        </form>
+      </div>
+      <div class="popup__success" style="display: none;">
         <div class="success-icon">✓</div>
-        <h3>Thank You!</h3>
-        <p>You've been added to our waitlist. We'll keep you updated on TALA's launch.</p>
+        <h2 class="popup__title">{{ section.settings.success_title }}</h2>
+        <p class="popup__text">{{ section.settings.success_text }}</p>
+        <button class="btn btn--primary btn--full popup__close-btn">{{ section.settings.close_button_text }}</button>
       </div>
     </div>
   </div>
@@ -29,47 +82,52 @@
 
 <script>
   document.addEventListener('DOMContentLoaded', function() {
-    const popup = document.getElementById('waitlist-popup');
-    const triggers = document.querySelectorAll('.waitlist-trigger');
-    const closeBtn = document.querySelector('.popup__close');
-    const overlay = document.querySelector('.popup__overlay');
-    const form = document.getElementById('waitlist-form');
-    const success = document.getElementById('waitlist-success');
+    // Waitlist popup
+    const waitlistTriggers = document.querySelectorAll('.waitlist-trigger');
+    const waitlistPopup = document.getElementById('waitlist-popup');
+    const popupClose = waitlistPopup.querySelector('.popup__close');
+    const popupCloseBtn = waitlistPopup.querySelector('.popup__close-btn');
+    const waitlistForm = document.getElementById('waitlist-form');
+    const formContainer = waitlistPopup.querySelector('.popup__form-container');
+    const successMessage = waitlistPopup.querySelector('.popup__success');
     
     // Open popup
-    triggers.forEach(trigger => {
+    waitlistTriggers.forEach(trigger => {
       trigger.addEventListener('click', function() {
-        popup.classList.add('active');
+        waitlistPopup.classList.add('active');
         document.body.classList.add('no-scroll');
       });
     });
     
     // Close popup
     function closePopup() {
-      popup.classList.remove('active');
+      waitlistPopup.classList.remove('active');
       document.body.classList.remove('no-scroll');
+      
+      // Reset form after animation completes
+      setTimeout(() => {
+        if (waitlistForm) waitlistForm.reset();
+        formContainer.style.display = '';
+        successMessage.style.display = 'none';
+      }, 300);
     }
     
-    closeBtn.addEventListener('click', closePopup);
-    overlay.addEventListener('click', closePopup);
+    popupClose.addEventListener('click', closePopup);
+    if (popupCloseBtn) popupCloseBtn.addEventListener('click', closePopup);
+    
+    waitlistPopup.querySelector('.popup__overlay').addEventListener('click', closePopup);
     
     // Form submission
-    form.addEventListener('submit', function(e) {
-      e.preventDefault();
-      
-      // Simulate form submission
-      setTimeout(function() {
-        form.style.display = 'none';
-        success.style.display = 'block';
+    if (waitlistForm) {
+      waitlistForm.addEventListener('submit', function(e) {
+        e.preventDefault();
         
-        // Reset and close after 3 seconds
-        setTimeout(function() {
-          form.reset();
-          form.style.display = 'block';
-          success.style.display = 'none';
-          closePopup();
-        }, 3000);
-      }, 1000);
-    });
+        // Simulate form submission
+        setTimeout(() => {
+          formContainer.style.display = 'none';
+          successMessage.style.display = 'block';
+        }, 500);
+      });
+    }
   });
 </script>

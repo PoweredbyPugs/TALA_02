@@ -1,80 +1,60 @@
-[
-  {
-    "name": "theme_info",
-    "theme_name": "TALA Landing Page",
-    "theme_version": "1.0.0",
-    "theme_author": "TALA",
-    "theme_documentation_url": "",
-    "theme_support_url": ""
-  },
-  {
-    "name": "Colors",
-    "settings": [
-      {
-        "type": "header",
-        "content": "Brand Colors"
-      },
-      {
-        "type": "color",
-        "id": "color_tala_tan",
-        "label": "TALA Tan",
-        "default": "#99866F"
-      },
-      {
-        "type": "color",
-        "id": "color_terrarium_moss",
-        "label": "Terrarium Moss",
-        "default": "#616247"
-      },
-      {
-        "type": "color",
-        "id": "color_charcoal_slate",
-        "label": "Charcoal Slate",
-        "default": "#2D2D2D"
-      },
-      {
-        "type": "color",
-        "id": "color_dust_blue",
-        "label": "Dust Blue",
-        "default": "#3E4A5F"
-      },
-      {
-        "type": "color",
-        "id": "color_graphite_silver",
-        "label": "Graphite Silver",
-        "default": "#C4C7C6"
-      },
-      {
-        "type": "color",
-        "id": "color_white",
-        "label": "White",
-        "default": "#FFFFFF"
-      }
-    ]
-  },
-  {
-    "name": "Typography",
-    "settings": [
-      {
-        "type": "header",
-        "content": "Headings"
-      },
-      {
-        "type": "font_picker",
-        "id": "heading_font",
-        "label": "Font",
-        "default": "helvetica_n4"
-      },
-      {
-        "type": "header",
-        "content": "Body text"
-      },
-      {
-        "type": "font_picker",
-        "id": "body_font",
-        "label": "Font",
-        "default": "helvetica_n4"
-      }
-    ]
-  }
-]
+{
+  "name": "TALA Shopify Theme",
+  "version": "1.0.0",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "primary_color",
+      "label": "Primary Color",
+      "default": "#99866F"
+    },
+    {
+      "type": "color",
+      "id": "secondary_color",
+      "label": "Secondary Color",
+      "default": "#616247"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text Color",
+      "default": "#2D2D2D"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "header",
+      "content": "Typography"
+    },
+    {
+      "type": "font_picker",
+      "id": "heading_font",
+      "label": "Heading Font",
+      "default": "roboto_n7"
+    },
+    {
+      "type": "font_picker",
+      "id": "body_font",
+      "label": "Body Font",
+      "default": "roboto_n4"
+    },
+    {
+      "type": "header",
+      "content": "Dark Mode"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_dark_mode",
+      "label": "Enable Dark Mode Toggle",
+      "default": true
+    }
+  ]
+}

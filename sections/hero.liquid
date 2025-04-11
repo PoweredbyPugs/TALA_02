@@ -1,18 +1,70 @@
+{% schema %}
+{
+  "name": "Hero Section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "The World's First Climate Controlled Dog Crate"
+    },
+    {
+      "type": "textarea",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "Introducing TALA: A revolutionary, climate-controlled dog crate designed for the modern pet owner"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Primary Button Text",
+      "default": "LEARN MORE"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Primary Button Link",
+      "default": "#features"
+    },
+    {
+      "type": "text",
+      "id": "waitlist_button_text",
+      "label": "Waitlist Button Text",
+      "default": "JOIN WAITLIST"
+    },
+    {
+      "type": "image_picker",
+      "id": "light_mode_image",
+      "label": "Light Mode Hero Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "dark_mode_image",
+      "label": "Dark Mode Hero Image"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Hero Section",
+      "category": "Hero"
+    }
+  ]
+}
+{% endschema %}
+
 <div class="hero">
-  <div class="hero__background">
-    <div class="hero__overlay"></div>
+  <div class="hero__image">
+    <img src="{{ section.settings.light_mode_image | default: 'Banner-Blue-Ocean.png' | asset_url }}" alt="TALA Dog Crate at Beach" class="hero__img light-mode-img">
+    <img src="{{ section.settings.dark_mode_image | default: 'Tan-blackstudio-02.png' | asset_url }}" alt="TALA Dog Crate" class="hero__img dark-mode-img">
   </div>
   <div class="container">
     <div class="hero__content">
-      <h1 class="hero__title">The World's First Climate Controlled Dog Crate</h1>
-      <p class="hero__subtitle">Introducing TALA: A revolutionary, climate-controlled dog crate designed for the modern pet owner</p>
+      <h1 class="hero__title">{{ section.settings.heading }}</h1>
+      <p class="hero__subtitle">{{ section.settings.subheading }}</p>
       <div class="hero__buttons">
-        <a href="#features" class="btn btn--primary">Learn More</a>
-        <button class="btn btn--secondary waitlist-trigger">Join Waitlist</button>
+        <a href="{{ section.settings.button_link }}" class="btn btn--primary">{{ section.settings.button_text }}</a>
+        <button class="btn btn--secondary waitlist-trigger">{{ section.settings.waitlist_button_text }}</button>
       </div>
-    </div>
-    <div class="hero__image">
-      <img src="{{ 'Untitled.png' | asset_url }}" alt="TALA Dog Crate" class="hero__img">
     </div>
   </div>
 </div>

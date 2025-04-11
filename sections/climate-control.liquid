@@ -1,34 +1,93 @@
+{% schema %}
+{
+  "name": "Climate Control Section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Advanced Climate Control"
+    },
+    {
+      "type": "textarea",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "Keep your pet comfortable in any environment with our revolutionary temperature management system"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Description",
+      "default": "TALA's climate control system uses advanced technology to maintain the perfect temperature for your pet, regardless of external conditions. Whether it's a hot summer day or a cold winter night, your dog will always be comfortable."
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Section Image"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "feature_item",
+      "name": "Feature Item",
+      "settings": [
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Feature Text",
+          "default": "Feature description"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Climate Control Section",
+      "category": "Content",
+      "blocks": [
+        {
+          "type": "feature_item"
+        },
+        {
+          "type": "feature_item"
+        },
+        {
+          "type": "feature_item"
+        },
+        {
+          "type": "feature_item"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
+
 <div id="climate-control" class="climate-control">
   <div class="container">
     <div class="section-header">
-      <h2 class="section-title">Perfect Climate, Always</h2>
-      <p class="section-subtitle">Advanced temperature control for your dog's comfort</p>
+      <h2 class="section-title">{{ section.settings.heading }}</h2>
+      <p class="section-subtitle">{{ section.settings.subheading }}</p>
     </div>
-    
     <div class="climate-control__content">
       <div class="climate-control__image">
-        <img src="{{ 'Untitled(6).png' | asset_url }}" alt="TALA Climate Control" class="climate-control__img">
+        {% if section.settings.image %}
+          <img src="{{ section.settings.image | img_url: 'master' }}" alt="{{ section.settings.heading }}" class="climate-control__img">
+        {% else %}
+          <img src="{{ 'ComfyUI_temp_pylsk_00018_.png' | asset_url }}" alt="{{ section.settings.heading }}" class="climate-control__img">
+        {% endif %}
       </div>
       <div class="climate-control__text">
-        <p>Our integrated "Backpack" HVAC system maintains a consistent, comfortable temperature inside the crate. Whether it's sweltering summer heat or freezing winter chills, your dog stays just right.</p>
-        
+        <p>{{ section.settings.description }}</p>
         <ul class="climate-control__features">
-          <li>
-            <span class="feature-icon">✓</span>
-            <span class="feature-text">Advanced circuitry for efficient temperature management</span>
-          </li>
-          <li>
-            <span class="feature-icon">✓</span>
-            <span class="feature-text">Consistent comfort in any environment</span>
-          </li>
-          <li>
-            <span class="feature-icon">✓</span>
-            <span class="feature-text">User-friendly touchscreen for easy adjustments</span>
-          </li>
-          <li>
-            <span class="feature-icon">✓</span>
-            <span class="feature-text">Optional companion app for remote monitoring (in development)</span>
-          </li>
+          {% for block in section.blocks %}
+            {% if block.type == 'feature_item' %}
+              <li {{ block.shopify_attributes }}>
+                <span class="feature-icon">✓</span>
+                <span class="feature-text">{{ block.settings.text }}</span>
+              </li>
+            {% endif %}
+          {% endfor %}
         </ul>
       </div>
     </div>

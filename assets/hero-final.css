@@ -1,0 +1,168 @@
+/* 
+ * TALA Landing Page - Final Hero Section Stylesheet
+ */
+
+.hero {
+  position: relative;
+  height: 100vh;
+  min-height: 700px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding-top: 80px;
+  background-color: #000;
+}
+
+.hero__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.hero__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: right center;
+}
+
+/* Light mode hero image */
+.hero__img.light-mode-img {
+  display: block;
+}
+
+.hero__img.dark-mode-img {
+  display: none;
+}
+
+/* Dark mode hero image - controlled by dark-mode class on body */
+.dark-mode .hero__img.light-mode-img {
+  display: none;
+}
+
+.dark-mode .hero__img.dark-mode-img {
+  display: block;
+}
+
+.hero .container {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  max-width: 1400px;
+}
+
+.hero__content {
+  flex: 0 0 50%;
+  text-align: left;
+  color: #fff;
+  padding-left: 6rem;
+  max-width: 600px;
+}
+
+.hero__title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.hero__subtitle {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.hero__buttons {
+  display: flex;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+
+.hero__buttons .btn {
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  letter-spacing: 1px;
+  border-radius: 4px;
+}
+
+.hero__buttons .btn--primary {
+  background-color: #333;
+  color: #fff;
+  border: none;
+}
+
+.hero__buttons .btn--primary:hover {
+  background-color: #444;
+}
+
+.hero__buttons .btn--secondary {
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+.hero__buttons .btn--secondary:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .hero__title {
+    font-size: 3rem;
+  }
+  
+  .hero__content {
+    padding-left: 4rem;
+    flex: 0 0 60%;
+  }
+}
+
+@media (max-width: 992px) {
+  .hero__title {
+    font-size: 2.5rem;
+  }
+  
+  .hero__content {
+    padding-left: 3rem;
+    flex: 0 0 70%;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    min-height: 600px;
+  }
+  
+  .hero__title {
+    font-size: 2rem;
+  }
+  
+  .hero__subtitle {
+    font-size: 1rem;
+  }
+  
+  .hero__content {
+    padding: 0 2rem;
+    flex: 0 0 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero__buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .hero__buttons .btn {
+    width: 100%;
+    text-align: center;
+  }
+}

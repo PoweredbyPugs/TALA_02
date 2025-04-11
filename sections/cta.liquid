@@ -1,11 +1,61 @@
-<div class="cta">
+{% schema %}
+{
+  "name": "CTA Section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Join the TALA Revolution"
+    },
+    {
+      "type": "textarea",
+      "id": "text",
+      "label": "Text",
+      "default": "Be among the first to experience the world's most advanced dog crate. Sign up for our waitlist to receive exclusive updates and early access."
+    },
+    {
+      "type": "text",
+      "id": "primary_button_text",
+      "label": "Primary Button Text",
+      "default": "Learn More"
+    },
+    {
+      "type": "url",
+      "id": "primary_button_link",
+      "label": "Primary Button Link",
+      "default": "#features"
+    },
+    {
+      "type": "text",
+      "id": "secondary_button_text",
+      "label": "Secondary Button Text",
+      "default": "Join Waitlist"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color",
+      "default": "#2D2D2D"
+    }
+  ],
+  "presets": [
+    {
+      "name": "CTA Section",
+      "category": "Call to Action"
+    }
+  ]
+}
+{% endschema %}
+
+<div class="cta" style="background-color: {{ section.settings.background_color }};">
   <div class="container">
     <div class="cta__content">
-      <h2 class="cta__title">Experience the TALA Difference</h2>
-      <p class="cta__text">Give your dog the ultimate travel experience. With its intelligent climate control, advanced safety features, and rugged portability, TALA is more than just a crate—it's a sanctuary.</p>
+      <h2 class="cta__title">{{ section.settings.title }}</h2>
+      <p class="cta__text">{{ section.settings.text }}</p>
       <div class="cta__buttons">
-        <a href="#features" class="btn btn--primary">Learn More</a>
-        <button class="btn btn--secondary waitlist-trigger">Join Waitlist</button>
+        <a href="{{ section.settings.primary_button_link }}" class="btn btn--primary">{{ section.settings.primary_button_text }}</a>
+        <button class="btn btn--secondary waitlist-trigger">{{ section.settings.secondary_button_text }}</button>
       </div>
     </div>
   </div>
