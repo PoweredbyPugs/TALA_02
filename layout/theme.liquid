@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page_title }}</title>
+  <meta name="description" content="{{ page_description | escape }}">
+  
+  {{ content_for_header }}
+  
+  <!-- Theme CSS -->
+  {{ 'main.css' | asset_url | stylesheet_tag }}
+  {{ 'dark-mode.css' | asset_url | stylesheet_tag }}
+  {{ 'hero-final.css' | asset_url | stylesheet_tag }}
+  
+  <!-- Theme JavaScript -->
+  <script src="{{ 'main.js' | asset_url }}" defer></script>
+</head>
+<body class="{% if settings.enable_dark_mode %}dark-mode-enabled{% endif %}">
+  {% section 'header' %}
+  
+  <main role="main">
+    {{ content_for_layout }}
+  </main>
+  
+  {% section 'footer' %}
+  {% section 'waitlist-popup' %}
+</body>
+</html>

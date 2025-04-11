@@ -1,60 +1,68 @@
-{
-  "name": "TALA Shopify Theme",
-  "version": "1.0.0",
-  "settings": [
-    {
-      "type": "header",
-      "content": "Colors"
-    },
-    {
-      "type": "color",
-      "id": "primary_color",
-      "label": "Primary Color",
-      "default": "#99866F"
-    },
-    {
-      "type": "color",
-      "id": "secondary_color",
-      "label": "Secondary Color",
-      "default": "#616247"
-    },
-    {
-      "type": "color",
-      "id": "text_color",
-      "label": "Text Color",
-      "default": "#2D2D2D"
-    },
-    {
-      "type": "color",
-      "id": "background_color",
-      "label": "Background Color",
-      "default": "#FFFFFF"
-    },
-    {
-      "type": "header",
-      "content": "Typography"
-    },
-    {
-      "type": "font_picker",
-      "id": "heading_font",
-      "label": "Heading Font",
-      "default": "roboto_n7"
-    },
-    {
-      "type": "font_picker",
-      "id": "body_font",
-      "label": "Body Font",
-      "default": "roboto_n4"
-    },
-    {
-      "type": "header",
-      "content": "Dark Mode"
-    },
-    {
-      "type": "checkbox",
-      "id": "enable_dark_mode",
-      "label": "Enable Dark Mode Toggle",
-      "default": true
-    }
-  ]
-}
+[
+  {
+    "name": "TALA Shopify Theme",
+    "settings": [
+      {
+        "type": "paragraph",
+        "content": "Version 1.0.0"
+      }
+    ]
+  },
+  {
+    "name": "Colors",
+    "settings": [
+      {
+        "type": "color",
+        "id": "primary_color",
+        "label": "Primary Color",
+        "default": "#99866F"
+      },
+      {
+        "type": "color",
+        "id": "secondary_color",
+        "label": "Secondary Color",
+        "default": "#616247"
+      },
+      {
+        "type": "color",
+        "id": "text_color",
+        "label": "Text Color",
+        "default": "#2D2D2D"
+      },
+      {
+        "type": "color",
+        "id": "background_color",
+        "label": "Background Color",
+        "default": "#FFFFFF"
+      }
+    ]
+  },
+  {
+    "name": "Typography",
+    "settings": [
+      {
+        "type": "font_picker",
+        "id": "heading_font",
+        "label": "Heading Font",
+        "default": "roboto_n7"
+      },
+      {
+        "type": "font_picker",
+        "id": "body_font",
+        "label": "Body Font",
+        "default": "roboto_n4"
+      }
+    ]
+  },
+  {
+    "name": "Dark Mode",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "enable_dark_mode",
+        "label": "Enable Dark Mode Toggle",
+        "default": true
+      }
+    ]
+  }
+]
