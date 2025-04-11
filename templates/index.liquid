@@ -1,24 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ page_title }}</title>
-  {{ 'main.css' | asset_url | stylesheet_tag }}
-  {{ 'dark-mode.css' | asset_url | stylesheet_tag }}
-  {{ 'hero-final.css' | asset_url | stylesheet_tag }}
-</head>
-<body>
-  {% section 'header' %}
-  {% section 'hero' %}
-  {% section 'features' %}
-  {% section 'climate-control' %}
-  {% section 'safety' %}
-  {% section 'portability' %}
-  {% section 'cta' %}
-  {% section 'footer' %}
-  {% section 'waitlist-popup' %}
-  
-  {{ 'main.js' | asset_url | script_tag }}
-</body>
-</html>
+{% section 'hero' %}
+{% section 'features' %}
+{% section 'climate-control' %}
+{% section 'safety' %}
+{% section 'portability' %}
+{% section 'cta' %}
+{% section 'waitlist-popup' %}

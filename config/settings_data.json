@@ -1,3 +1,248 @@
 {
-  "current": {}
+  "current": {
+    "colors": {
+      "primary_color": "#99866F",
+      "secondary_color": "#616247",
+      "text_color": "#2D2D2D",
+      "background_color": "#FFFFFF"
+    },
+    "typography": {
+      "heading_font": "bahnschrift_n4",
+      "body_font": "inter_n4"
+    },
+    "dark_mode": {
+      "enable_dark_mode": true
+    },
+    "sections": {
+      "header": {
+        "type": "header",
+        "settings": {
+          "logo_width": 100,
+          "enable_dark_mode_toggle": true,
+          "waitlist_button_text": "Join Waitlist"
+        },
+        "blocks": {
+          "menu-item-1": {
+            "type": "menu_item",
+            "settings": {
+              "title": "Features",
+              "link": "#features"
+            }
+          },
+          "menu-item-2": {
+            "type": "menu_item",
+            "settings": {
+              "title": "Climate Control",
+              "link": "#climate-control"
+            }
+          },
+          "menu-item-3": {
+            "type": "menu_item",
+            "settings": {
+              "title": "Safety",
+              "link": "#safety"
+            }
+          },
+          "menu-item-4": {
+            "type": "menu_item",
+            "settings": {
+              "title": "Portability",
+              "link": "#portability"
+            }
+          }
+        },
+        "block_order": ["menu-item-1", "menu-item-2", "menu-item-3", "menu-item-4"]
+      },
+      "features": {
+        "type": "features",
+        "settings": {
+          "heading": "Innovative Features",
+          "subheading": "TALA combines cutting-edge technology with thoughtful design to create the ultimate dog crate experience"
+        },
+        "blocks": {
+          "feature-1": {
+            "type": "feature",
+            "settings": {
+              "title": "CLIMATE CONTROL",
+              "text": "Advanced temperature regulation system keeps your pet comfortable in any environment",
+              "icon": ""
+            }
+          },
+          "feature-2": {
+            "type": "feature",
+            "settings": {
+              "title": "SMART TECHNOLOGY",
+              "text": "Monitor and control your pet's environment remotely with our intuitive mobile app",
+              "icon": ""
+            }
+          },
+          "feature-3": {
+            "type": "feature",
+            "settings": {
+              "title": "DURABLE CONSTRUCTION",
+              "text": "Built with high-quality, impact-resistant materials designed to last for years",
+              "icon": ""
+            }
+          },
+          "feature-4": {
+            "type": "feature",
+            "settings": {
+              "title": "PORTABLE DESIGN",
+              "text": "Lightweight and easy to transport, perfect for travel and outdoor adventures",
+              "icon": ""
+            }
+          },
+          "feature-5": {
+            "type": "feature",
+            "settings": {
+              "title": "BATTERY POWERED",
+              "text": "Long-lasting rechargeable battery ensures your pet stays comfortable anywhere",
+              "icon": ""
+            }
+          },
+          "feature-6": {
+            "type": "feature",
+            "settings": {
+              "title": "ADVENTURE READY",
+              "text": "Designed for outdoor enthusiasts who want to bring their pets on every journey",
+              "icon": ""
+            }
+          }
+        },
+        "block_order": ["feature-1", "feature-2", "feature-3", "feature-4", "feature-5", "feature-6"]
+      },
+      "climate-control": {
+        "type": "climate-control",
+        "settings": {
+          "heading": "Advanced Climate Control",
+          "subheading": "Keep your pet comfortable in any environment with our revolutionary temperature management system",
+          "description": "TALA's climate control system uses advanced technology to maintain the perfect temperature for your pet, regardless of external conditions. Whether it's a hot summer day or a cold winter night, your dog will always be comfortable."
+        },
+        "blocks": {
+          "climate-feature-1": {
+            "type": "feature_item",
+            "settings": {
+              "text": "Precise temperature regulation for year-round comfort"
+            }
+          },
+          "climate-feature-2": {
+            "type": "feature_item",
+            "settings": {
+              "text": "Energy-efficient cooling and heating systems"
+            }
+          },
+          "climate-feature-3": {
+            "type": "feature_item",
+            "settings": {
+              "text": "Automatic adjustment based on ambient conditions"
+            }
+          },
+          "climate-feature-4": {
+            "type": "feature_item",
+            "settings": {
+              "text": "Silent operation for undisturbed rest"
+            }
+          }
+        },
+        "block_order": ["climate-feature-1", "climate-feature-2", "climate-feature-3", "climate-feature-4"]
+      },
+      "safety": {
+        "type": "safety",
+        "settings": {
+          "heading": "Uncompromising Safety",
+          "subheading": "Your pet's safety is our top priority, with features designed to protect them in any situation",
+          "description": "TALA is built with safety at its core. Every aspect of the design has been carefully considered to ensure your pet is secure and protected at all times, giving you peace of mind wherever you go."
+        },
+        "blocks": {
+          "safety-feature-1": {
+            "type": "feature_item",
+            "settings": {
+              "text": "Impact-resistant exterior protects against bumps and falls"
+            }
+          },
+          "safety-feature-2": {
+            "type": "feature_item",
+            "settings": {
+              "text": "Ventilation system ensures proper airflow at all times"
+            }
+          },
+          "safety-feature-3": {
+            "type": "feature_item",
+            "settings": {
+              "text": "Secure locking mechanism prevents accidental openings"
+            }
+          },
+          "safety-feature-4": {
+            "type": "feature_item",
+            "settings": {
+              "text": "Anti-slip base keeps the crate stable on any surface"
+            }
+          }
+        },
+        "block_order": ["safety-feature-1", "safety-feature-2", "safety-feature-3", "safety-feature-4"]
+      },
+      "portability": {
+        "type": "portability",
+        "settings": {
+          "heading": "Ultimate Portability",
+          "subheading": "Take your pet anywhere with TALA's lightweight, easy-to-transport design",
+          "description": "TALA's innovative design makes it incredibly easy to transport, allowing you to bring your pet on all your adventures. Whether you're traveling by car, plane, or foot, TALA goes wherever you go."
+        },
+        "blocks": {
+          "portability-feature-1": {
+            "type": "feature_item",
+            "settings": {
+              "text": "Lightweight construction for easy carrying"
+            }
+          },
+          "portability-feature-2": {
+            "type": "feature_item",
+            "settings": {
+              "text": "Ergonomic handles for comfortable transport"
+            }
+          },
+          "portability-feature-3": {
+            "type": "feature_item",
+            "settings": {
+              "text": "Compact design fits in most vehicles"
+            }
+          },
+          "portability-feature-4": {
+            "type": "feature_item",
+            "settings": {
+              "text": "Travel-friendly features for outdoor adventures"
+            }
+          }
+        },
+        "block_order": ["portability-feature-1", "portability-feature-2", "portability-feature-3", "portability-feature-4"]
+      },
+      "cta": {
+        "type": "cta",
+        "settings": {
+          "heading": "Join the TALA Revolution",
+          "subheading": "Be among the first to experience the world's most advanced dog crate. Sign up for our waitlist to receive exclusive updates and early access.",
+          "button_text": "JOIN WAITLIST",
+          "learn_more_text": "LEARN MORE"
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "settings": {
+          "show_payment_icons": true,
+          "show_social_icons": true
+        }
+      },
+      "waitlist-popup": {
+        "type": "waitlist-popup",
+        "settings": {
+          "title": "Join the Waitlist",
+          "text": "Be the first to know when TALA becomes available. Sign up for exclusive updates and early access.",
+          "button_text": "Join Waitlist",
+          "success_title": "Thank You!",
+          "success_text": "You've been added to our waitlist. We'll keep you updated on TALA's progress and notify you when it's available.",
+          "close_button_text": "Close"
+        }
+      }
+    }
+  }
 }
