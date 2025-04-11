@@ -3,9 +3,9 @@
     <title>Adventure Ready Icon</title>
     <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <circle stroke="#2D2D2D" stroke-width="4" cx="40" cy="40" r="25"></circle>
-        <path d="M25,40 L55,40" stroke="#2D2D2D" stroke-width="4" stroke-linecap="round"></path>
-        <path d="M40,25 L40,55" stroke="#2D2D2D" stroke-width="4" stroke-linecap="round"></path>
-        <path d="M30,30 L50,50" stroke="#2D2D2D" stroke-width="4" stroke-linecap="round" stroke-dasharray="1,6"></path>
-        <path d="M50,30 L30,50" stroke="#2D2D2D" stroke-width="4" stroke-linecap="round" stroke-dasharray="1,6"></path>
+        <path d="M25,40 L55,40" stroke="#99866F" stroke-width="4" stroke-linecap="round"></path>
+        <path d="M40,25 L40,55" stroke="#99866F" stroke-width="4" stroke-linecap="round"></path>
+        <path d="M30,30 L50,50" stroke="#99866F" stroke-width="4" stroke-linecap="round" stroke-dasharray="1,6"></path>
+        <path d="M50,30 L30,50" stroke="#99866F" stroke-width="4" stroke-linecap="round" stroke-dasharray="1,6"></path>
     </g>
 </svg>

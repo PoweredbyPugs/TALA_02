@@ -2,7 +2,7 @@
 <svg width="80px" height="80px" viewBox="0 0 80 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <title>Climate Control Icon</title>
     <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <circle stroke="#2D2D2D" stroke-width="4" cx="40" cy="40" r="15"></circle>
+        <circle fill="#616247" stroke="#616247" stroke-width="4" cx="40" cy="40" r="15"></circle>
         <line x1="40" y1="10" x2="40" y2="20" stroke="#2D2D2D" stroke-width="4" stroke-linecap="round"></line>
         <line x1="40" y1="60" x2="40" y2="70" stroke="#2D2D2D" stroke-width="4" stroke-linecap="round"></line>
         <line x1="10" y1="40" x2="20" y2="40" stroke="#2D2D2D" stroke-width="4" stroke-linecap="round"></line>

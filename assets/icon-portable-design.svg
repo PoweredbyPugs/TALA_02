@@ -2,8 +2,8 @@
 <svg width="80px" height="80px" viewBox="0 0 80 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <title>Portable Design Icon</title>
     <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <path d="M25,25 L55,25 L55,60 L25,60 Z" stroke="#2D2D2D" stroke-width="4"></path>
-        <path d="M35,25 L35,15 L45,15 L45,25" stroke="#2D2D2D" stroke-width="4"></path>
-        <rect x="35" y="40" width="10" height="10" stroke="#2D2D2D" stroke-width="4"></rect>
+        <path d="M25,25 L55,25 L55,60 L25,60 Z" fill="#EFF1EA" stroke="#2D2D2D" stroke-width="4"></path>
+        <path d="M35,25 L35,15 L45,15 L45,25" fill="#616247" stroke="#616247" stroke-width="4"></path>
+        <rect x="35" y="40" width="10" height="10" fill="#616247" stroke="#616247" stroke-width="4"></rect>
     </g>
 </svg>

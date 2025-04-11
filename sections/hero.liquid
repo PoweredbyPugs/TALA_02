@@ -56,11 +56,14 @@
   <div class="hero__image">
     <img src="{{ section.settings.light_mode_image | default: 'rock-climb-01.png' | asset_url }}" alt="TALA Dog Crate in Canyon" class="hero__img light-mode-img">
     <img src="{{ section.settings.dark_mode_image | default: 'Tan-blackstudio-02.png' | asset_url }}" alt="TALA Dog Crate" class="hero__img dark-mode-img">
+    <div class="hero__overlay mobile-only"></div>
   </div>
   <div class="container">
     <div class="hero__content">
+      <div class="hero__logo mobile-only">
+        <img src="{{ 'tala-logo-cream.png' | asset_url }}" alt="TALA" class="hero__logo-img">
+      </div>
       <h1 class="hero__title">{{ section.settings.heading }}</h1>
-      <p class="hero__subtitle">{{ section.settings.subheading }}</p>
       <div class="hero__buttons">
         <a href="{{ section.settings.button_link }}" class="btn btn--primary">{{ section.settings.button_text }}</a>
         <button class="btn btn--secondary waitlist-trigger">{{ section.settings.waitlist_button_text }}</button>

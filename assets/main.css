@@ -13,7 +13,7 @@
   --graphite-silver: #C4C7C6;
   --white: #FFFFFF;
   --deep-teal: #1A4A4A;
-  --rich-olive: #4A5D41;
+  --rich-olive: #616247;
   
   /* Additional UI Colors */
   --black: #000000;
@@ -129,23 +129,23 @@ ul, ol {
 }
 
 .btn--primary {
-  background-color: var(--rich-olive);
+  background-color: #616247;
   color: var(--white);
 }
 
 .btn--primary:hover {
-  background-color: var(--deep-teal);
+  background-color: #4A4A36;
   transform: translateY(-2px);
 }
 
 .btn--secondary {
   background-color: transparent;
-  color: var(--rich-olive);
-  border: 2px solid var(--rich-olive);
+  color: #616247;
+  border: 2px solid #616247;
 }
 
 .btn--secondary:hover {
-  background-color: var(--rich-olive);
+  background-color: #616247;
   color: var(--white);
   transform: translateY(-2px);
 }
@@ -206,7 +206,7 @@ ul, ol {
   left: 0;
   width: 0;
   height: 2px;
-  background-color: var(--charcoal-slate);
+  background-color: #616247;
   transition: width var(--transition-medium);
 }
 
@@ -319,7 +319,7 @@ ul, ol {
 /* Features Section */
 .features {
   padding: var(--spacing-xl) 0;
-  background-color: var(--light-gray);
+  background-color: #F0F5F5; /* Light teal background */
 }
 
 .features__grid {
@@ -379,6 +379,7 @@ ul, ol {
 /* Climate Control Section */
 .climate-control {
   padding: var(--spacing-xl) 0;
+  background-color: #FFFFFF; /* Pure white background */
 }
 
 .climate-control__content {
@@ -430,7 +431,7 @@ ul, ol {
 /* Safety Section */
 .safety {
   padding: var(--spacing-xl) 0;
-  background-color: var(--light-gray);
+  background-color: #F5EFE6; /* Light tan background */
 }
 
 .safety__content {
@@ -473,6 +474,7 @@ ul, ol {
 /* Portability Section */
 .portability {
   padding: var(--spacing-xl) 0;
+  background-color: #E8F0F6; /* Light blue background */
 }
 
 .portability__content {
@@ -514,7 +516,7 @@ ul, ol {
 /* CTA Section */
 .cta {
   padding: var(--spacing-xl) 0;
-  background-color: var(--terrarium-moss);
+  background-color: #616247; /* On-brand green color */
   color: var(--white);
 }
 
@@ -625,7 +627,7 @@ ul, ol {
 }
 
 .footer__link:hover {
-  color: var(--rich-olive);
+  color: #616247;
 }
 
 .footer__social {
@@ -657,7 +659,7 @@ ul, ol {
 }
 
 .footer__legal-link:hover {
-  color: var(--rich-olive);
+  color: #616247;
 }
 
 /* Popup */
@@ -742,7 +744,7 @@ ul, ol {
   font-size: 2rem;
   font-weight: 700;
   margin-bottom: var(--spacing-sm);
-  color: var(--rich-olive);
+  color: #616247;
 }
 
 .popup__text {
@@ -764,7 +766,7 @@ ul, ol {
 
 .form-label {
   font-weight: 500;
-  color: var(--rich-olive);
+  color: #616247;
 }
 
 .form-input {
@@ -779,7 +781,7 @@ ul, ol {
 
 .form-input:focus {
   outline: none;
-  border-color: var(--rich-olive);
+  border-color: #616247;
 }
 
 .popup__success {
@@ -790,7 +792,7 @@ ul, ol {
 .success-icon {
   width: 60px;
   height: 60px;
-  background-color: var(--rich-olive);
+  background-color: #616247;
   color: var(--white);
   border-radius: 50%;
   display: flex;
@@ -826,7 +828,7 @@ ul, ol {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: var(--rich-olive);
+  background-color: #616247;
   transition: var(--transition-medium);
   border-radius: 30px;
 }

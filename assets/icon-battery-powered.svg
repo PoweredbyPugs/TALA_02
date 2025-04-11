@@ -2,9 +2,9 @@
 <svg width="80px" height="80px" viewBox="0 0 80 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <title>Battery Powered Icon</title>
     <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <rect x="20" y="30" width="40" height="30" stroke="#2D2D2D" stroke-width="4"></rect>
-        <rect x="30" y="20" width="20" height="10" stroke="#2D2D2D" stroke-width="4"></rect>
-        <path d="M35,40 L35,50" stroke="#2D2D2D" stroke-width="4" stroke-linecap="round"></path>
-        <path d="M45,40 L45,50" stroke="#2D2D2D" stroke-width="4" stroke-linecap="round"></path>
+        <rect fill="#EFF1EA" x="20" y="30" width="40" height="30" stroke="#2D2D2D" stroke-width="4"></rect>
+        <rect fill="#616247" x="30" y="20" width="20" height="10" stroke="#2D2D2D" stroke-width="4"></rect>
+        <path d="M35,40 L35,50" stroke="#616247" stroke-width="4" stroke-linecap="round"></path>
+        <path d="M45,40 L45,50" stroke="#616247" stroke-width="4" stroke-linecap="round"></path>
     </g>
 </svg>

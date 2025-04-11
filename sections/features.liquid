@@ -74,7 +74,21 @@
               {% if block.settings.icon %}
                 <img src="{{ block.settings.icon | img_url: 'master' }}" alt="{{ block.settings.title }}">
               {% else %}
-                <img src="{{ 'icon-climate-control.svg' | asset_url }}" alt="{{ block.settings.title }}">
+                {% assign icon_index = forloop.index | modulo: 6 %}
+                {% case icon_index %}
+                  {% when 1 %}
+                    <img src="{{ 'icon-climate-control.svg' | asset_url }}" alt="{{ block.settings.title }}">
+                  {% when 2 %}
+                    <img src="{{ 'icon-adventure-ready.svg' | asset_url }}" alt="{{ block.settings.title }}">
+                  {% when 3 %}
+                    <img src="{{ 'icon-battery-powered.svg' | asset_url }}" alt="{{ block.settings.title }}">
+                  {% when 4 %}
+                    <img src="{{ 'icon-durable-construction.svg' | asset_url }}" alt="{{ block.settings.title }}">
+                  {% when 5 %}
+                    <img src="{{ 'icon-portable-design.svg' | asset_url }}" alt="{{ block.settings.title }}">
+                  {% when 0 %}
+                    <img src="{{ 'icon-smart-technology.svg' | asset_url }}" alt="{{ block.settings.title }}">
+                {% endcase %}
               {% endif %}
             </div>
             <h3 class="feature-card__title">{{ block.settings.title }}</h3>

@@ -1,0 +1,313 @@
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+  /* Hide dark mode toggle on mobile */
+  .theme-toggle {
+    display: none;
+  }
+  
+  /* Adjust header for mobile */
+  .header .container {
+    height: 70px;
+  }
+  
+  .header__logo-img {
+    height: 30px;
+  }
+  
+  /* Improve mobile navigation */
+  .header__nav {
+    display: none;
+    position: fixed;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background-color: var(--white);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    padding: var(--spacing-md) 0;
+    z-index: 99;
+  }
+  
+  .header__nav.active {
+    display: block;
+  }
+  
+  .header__nav-list {
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    padding: 0 var(--spacing-md);
+  }
+  
+  .header__nav-item {
+    width: 100%;
+    text-align: center;
+    padding: var(--spacing-xs) 0;
+    border-bottom: 1px solid var(--light-gray);
+  }
+  
+  .header__nav-item:last-child {
+    border-bottom: none;
+  }
+  
+  /* Show mobile toggle button */
+  .header__mobile-toggle {
+    display: flex;
+    cursor: pointer;
+    z-index: 100;
+  }
+  
+  /* Adjust CTA button in header */
+  .header__cta .btn {
+    padding: 0.75rem 1.25rem;
+    font-size: 0.875rem;
+  }
+  
+  /* Desktop/Mobile visibility classes */
+  .desktop-only {
+    display: none !important;
+  }
+  
+  .mobile-only {
+    display: block;
+  }
+  
+  /* Hero section adjustments for mobile */
+  .hero {
+    min-height: 100vh;
+    padding-top: 70px;
+    height: auto;
+    position: relative;
+  }
+  
+  .hero__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+  
+  .hero__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  /* Hero overlay for better text readability on mobile */
+  .hero__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(45, 45, 45, 0.5); /* #2D2D2D with 50% opacity */
+    z-index: 2;
+  }
+  
+  .hero .container {
+    position: relative;
+    z-index: 3; /* Increased z-index to appear above overlay */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: var(--spacing-lg) var(--spacing-sm);
+  }
+  
+  .hero__content {
+    text-align: center;
+    max-width: 100%;
+    padding: 0;
+    margin: 0 auto;
+    width: 100%;
+  }
+  
+  .hero__logo {
+    margin-bottom: var(--spacing-md);
+    text-align: center;
+  }
+  
+  .hero__logo-img {
+    width: 180px;
+    height: auto;
+    margin: 0 auto;
+  }
+  
+  .hero__title {
+    font-size: 1.8rem;
+    margin-bottom: var(--spacing-md);
+    line-height: 1.2;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+  }
+  
+  .hero__subtitle {
+    display: none; /* Hide subtitle on mobile as per mockup */
+  }
+  
+  .hero__buttons {
+    justify-content: center;
+    margin-top: var(--spacing-md);
+  }
+  
+  /* Original button styling restored and centered */
+  .hero__buttons {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    justify-content: center;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 280px;
+  }
+  
+  /* Adjust button sizes for better mobile touch targets */
+  .btn {
+    padding: 1rem 1.5rem;
+    min-width: 140px;
+    font-size: 0.9rem;
+    width: 100%;
+  }
+  
+  /* Improve CTA section for mobile */
+  .cta {
+    padding: var(--spacing-lg) 0;
+  }
+  
+  .cta__title {
+    font-size: 2rem;
+    line-height: 1.2;
+    margin-bottom: var(--spacing-sm);
+  }
+  
+  .cta__text {
+    font-size: 1.125rem;
+    margin-bottom: var(--spacing-md);
+    padding: 0 var(--spacing-sm);
+  }
+  
+  .cta__buttons {
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    max-width: 280px;
+    margin: 0 auto;
+  }
+  
+  .cta__buttons .btn {
+    width: 100%;
+  }
+  
+  /* Improve feature cards layout for mobile */
+  .features__grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+  }
+  
+  /* Adjust content sections for mobile */
+  .climate-control__content,
+  .safety__content,
+  .portability__content {
+    flex-direction: column;
+    gap: var(--spacing-md);
+  }
+  
+  .climate-control__image,
+  .safety__image,
+  .portability__image {
+    order: 1;
+    margin-bottom: var(--spacing-md);
+  }
+  
+  .climate-control__text,
+  .safety__text,
+  .portability__text {
+    order: 2;
+  }
+  
+  /* Style for active mobile toggle */
+  .header__mobile-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  
+  .header__mobile-toggle.active span:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .header__mobile-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
+  }
+  
+  /* Make hamburger menu more visible */
+  .header__mobile-toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    margin-left: 10px;
+    z-index: 100;
+  }
+  
+  .header__mobile-toggle span {
+    display: block;
+    width: 25px;
+    height: 2px;
+    margin: 4px 0;
+    background-color: #2D2D2D;
+    transition: all 0.3s ease;
+  }
+}
+
+/* Small mobile devices */
+@media (max-width: 480px) {
+  .hero__content {
+    padding: var(--spacing-sm);
+    margin-top: 15vh;
+  }
+  
+  .hero__title {
+    font-size: 2rem;
+  }
+  
+  .hero__buttons {
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    width: 100%;
+  }
+  
+  .hero__buttons .btn {
+    width: 100%;
+  }
+  
+  /* Adjust section spacing */
+  :root {
+    --spacing-lg: 2.5rem;
+    --spacing-xl: 4rem;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .section-subtitle {
+    font-size: 1rem;
+  }
+  
+  /* Improve waitlist popup for small screens */
+  .popup__container {
+    max-width: 90%;
+  }
+  
+  .popup__title {
+    font-size: 1.5rem;
+  }
+  
+  .popup__text {
+    font-size: 0.9rem;
+  }
+}

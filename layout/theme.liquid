@@ -12,11 +12,13 @@
   {{ 'main.css' | asset_url | stylesheet_tag }}
   {{ 'dark-mode.css' | asset_url | stylesheet_tag }}
   {{ 'hero-final.css' | asset_url | stylesheet_tag }}
+  {{ 'mobile.css' | asset_url | stylesheet_tag }}
   
   <!-- Theme JavaScript -->
-  <script src="{{ 'main.js' | asset_url }}" defer></script>
+  <script src="{{ 'main.js' | asset_url }}"></script>
+  <script src="{{ 'mobile.js' | asset_url }}"></script>
 </head>
-<body class="{% if settings.enable_dark_mode %}dark-mode-enabled{% endif %}">
+<body class="light-mode">
   {% section 'header' %}
   
   <main role="main">
@@ -25,5 +27,27 @@
   
   {% section 'footer' %}
   {% section 'waitlist-popup' %}
+  
+  <!-- Ensure mobile menu functionality works -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Force initialize mobile menu functionality
+      const mobileToggle = document.querySelector('.header__mobile-toggle');
+      const navMenu = document.querySelector('.header__nav');
+      
+      if (mobileToggle && navMenu) {
+        mobileToggle.addEventListener('click', function(e) {
+          e.preventDefault();
+          e.stopPropagation();
+          
+          // Toggle navigation menu visibility
+          navMenu.classList.toggle('active');
+          
+          // Toggle hamburger menu animation
+          this.classList.toggle('active');
+        });
+      }
+    });
+  </script>
 </body>
 </html>

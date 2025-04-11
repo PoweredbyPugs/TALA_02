@@ -1,0 +1,59 @@
+/*! tailwindcss v3.3.5 | MIT License | https://tailwindcss.com */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Tailwind components for TALA */
+@layer components {
+  .tala-container {
+    @apply w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  .tala-btn {
+    @apply inline-block py-3 px-6 font-medium text-center uppercase tracking-wider transition-all duration-300 ease-in-out cursor-pointer rounded text-sm sm:text-base;
+  }
+  
+  .tala-btn-primary {
+    @apply tala-btn bg-[#616247] text-white hover:bg-[#4A4A36] hover:-translate-y-0.5 shadow-md;
+  }
+  
+  .tala-btn-secondary {
+    @apply tala-btn bg-transparent text-[#616247] border-2 border-[#616247] hover:bg-[#616247] hover:text-white hover:-translate-y-0.5;
+  }
+  
+  .tala-hero {
+    @apply relative min-h-screen flex items-center pt-[70px] overflow-hidden;
+  }
+  
+  .tala-hero-image {
+    @apply absolute inset-0 w-full h-full z-0;
+  }
+  
+  .tala-hero-img {
+    @apply w-full h-full object-cover;
+  }
+  
+  .tala-hero-overlay {
+    @apply absolute inset-0 bg-[#2D2D2D]/50 z-10;
+  }
+  
+  .tala-hero-content {
+    @apply relative z-20 text-center max-w-3xl mx-auto px-4 py-8;
+  }
+  
+  .tala-hero-logo {
+    @apply mb-6 mx-auto;
+  }
+  
+  .tala-hero-logo-img {
+    @apply w-44 h-auto mx-auto;
+  }
+  
+  .tala-hero-title {
+    @apply text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-white leading-tight drop-shadow-md;
+  }
+  
+  .tala-hero-buttons {
+    @apply flex flex-col sm:flex-row gap-4 justify-center max-w-xs sm:max-w-md mx-auto;
+  }
+}
